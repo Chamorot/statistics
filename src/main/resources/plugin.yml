@@ -1,0 +1,23 @@
+name: PlayerStats
+version: '${project.version}'
+main: me.chamorot.playerstats.PlayerStats
+api-version: '1.21'
+author: chamorot
+description: Displays detailed player statistics, persisted across server restarts.
+
+commands:
+  stats:
+    description: Shows your player statistics (persistent across restarts)
+    usage: /stats [player]
+    aliases: [playerstats, pstats]
+    permission: playerstats.use
+    # No permission-message here — legacy &c codes display literally on Paper 1.21.
+    # The permission check is handled programmatically in StatsCommand with Adventure API.
+
+permissions:
+  playerstats.use:
+    description: Allows using /stats on yourself
+    default: true
+  playerstats.others:
+    description: Allows using /stats on other players (and tab-completing names)
+    default: op
