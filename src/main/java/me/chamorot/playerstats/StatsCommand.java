@@ -152,7 +152,6 @@ public class StatsCommand implements CommandExecutor, TabCompleter {
                 + p.getStatistic(Statistic.MINECART_ONE_CM)         // minecart
                 + p.getStatistic(Statistic.PIG_ONE_CM)              // riding pig
                 + p.getStatistic(Statistic.STRIDER_ONE_CM)          // riding strider (nether)
-//                + p.getStatistic(Statistic.CAMEL_ONE_CM)            // riding camel (1.20+)
         ) / 100.0;
 
         sender.sendMessage(section("🗺  Distance"));
